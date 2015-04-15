@@ -51,3 +51,6 @@ Ha egy függvényen belül csak egy utasítás van, akkor a kapcsos zárójelek 
 * függvény változóinak megadás kétféleképp ( hely, illetve név szerint ) lehetséges
 * előfordulhat, hogy egyes változókra nevükkel, másokra pedig helyzetük alapján hivatkozunk a függvényen belül, ekkor a helyzet szerintiek sorrendje úgy alakul, hogy melyekre a nevükkel hivatkoztunk kiesik a listából és a megmaradtak közül a soron következő lesz hely szerint hivatkozható
 * ha egy függvény argumentumában nincs feltüntetve alapértelmezett érték, akkor hívás esetén azt mindenképp meg kell adni - nélküle _error_-t kapunk vissza
+* akkor érdemes név szerint hívni változót, ha a függvény legtöbb változóját mint alapértelmezett érték használjuk és amit felülírnánk az pedig nem az első helyen van - például az ábrázoló függvényeknél, ugyanis itt rengeteg beállítási lehetőségünk van
+* megtörténhet az is, hogy nem emlékszünk az egyes változó nevére, ekkor sem kell elkeseredni, ugyanis van lehetőség részleges név szerinti egyezéssel definiálni egy változót a függvényben
+* összegezve, egy függvényen belül az argumentumokat úgy nézi át a program, hogy először megnézni név szerint hol van teljes egyezés - ezeket ekkor értelemszerűen felülírja, ezután megnézi a részleges név szerinti egyezést, majd a pozíció szerintit
