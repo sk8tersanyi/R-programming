@@ -27,6 +27,9 @@ Alapvető függvények használata, illetve különleges tulajdonságai.
 * megszokottnak megfelel
 * a feltételek mindig balról jobbra értékelődnek ki !!!!!!!!!!!!!!!!!!
 
+### REPEAT függvény
+* végtelen ciklus generálására használható - statisztikában nem igazán használják
+
 
 * ha egy függvényen belül csak egy utasítás van, akkor a kapcsos zárójelek elhagyhatóak
 
