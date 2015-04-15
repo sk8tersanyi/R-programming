@@ -5,6 +5,7 @@ Az első hét anyagát nem írom le, mivel már tudom azokat, de majd ha lesz id
 
 ## Második hét
 Alapvető függvények használata, illetve különleges tulajdonságai.
+
 ### IF-ELSE függvény
 * az _else_-t nem szükségszerűen kell használni, de ha használjuk, akkor az _if_-et lezáró kapcsos zárójel után kell írni
 * értelemszerűen van _if else_ használati lehetőség is, ha több opció lehetséges
@@ -15,11 +16,16 @@ Alapvető függvények használata, illetve különleges tulajdonságai.
 
 ### FOR ciklus
 * indexeken tudunk ugrálni - ahogyan azt már megszokhattuk
-* viszont van lehetőség rögtön indexek nélkül az elemeken végigmenni, ekkor a porgramkód így nézhet ki:
+* viszont van lehetőség rögtön indexek nélkül az elemeken végigmenni - pont ezért nem használok *i* indexet, hogy ezt rendesen szemléltessem:
 <blockquote>
   <p> x <- c("a", "b", "c", "d") </p>
   <p> for(letter in x) { print(letter) } </p>
 </blockquote>
+* a *seq_len()* függvénnyel lehet rögtön olyan hosszú ciklust hívni amekkora kell
+
+### WHILE ciklus
+* megszokottnak megfelel
+* a feltételek mindig balról jobbra értékelődnek ki !!!!!!!!!!!!!!!!!!
 
 
 * ha egy függvényen belül csak egy utasítás van, akkor a kapcsos zárójelek elhagyhatóak
