@@ -27,8 +27,11 @@ Alapvető függvények használata, illetve különleges tulajdonságai.
 * megszokottnak megfelel
 * a feltételek mindig balról jobbra értékelődnek ki !!!!!!!!!!!!!!!!!!
 
-### REPEAT függvény
-* végtelen ciklus generálására használható - statisztikában nem igazán használják
+### REPEAT, BREAK, NEXT függvények
+* a _repeat_ függvény végtelen ciklus generálására használható ( például konvergencia feltevések megsejtésére )
+* egyedül a _break_ segítségével tudunk kilépni a ciklusból
+* nem érdemes használni, mivel ha nincs például konvergencia, akkor nem fog figyelmeztetni, hogy nem áll meg soha - inkább egy nagy iterációszámú _for_ ciklust használjunk
+* 
 
 
 * ha egy függvényen belül csak egy utasítás van, akkor a kapcsos zárójelek elhagyhatóak
