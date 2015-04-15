@@ -46,3 +46,6 @@ Ha egy függvényen belül csak egy utasítás van, akkor a kapcsos zárójelek 
 </blockquote>
 * az eddigiekhez hasonlóan, a függvények szintén, mint objektumok vannak eltárolva
 * továbbá ugyanúgy, mint az összes többi programozási nyelvben a függvények itt is _"first-class-object"_-ként vannak eltárolva, ami annyit tesz, hogy képesek vagyunk egy függvény argumentumába függvényt meghívni
+* beszélhetünk úgynevezett _formal_ argumentumokról is, melyek nem mások, mint azon argumentumok, melyeket a függvényben be tudunk állítani - tetszőleges függvény formális argumentumainak listáját a _formals_ függvénnyel tudjuk megtekinteni ( ha van _default_ értékes argumentum is, akkor annak kiírja a alapértelmezett értékét is
+* függvény változóinak megadás kétféleképp ( hely, illetve név szerint ) lehetséges
+* előfordulhat, hogy egyes változókra nevükkel, másokra pedig helyzetük alapján hivatkozunk a függvényen belül, ekkor a helyzet szerintiek sorrendje úgy alakul, hogy melyekre a nevükkel hivatkoztunk kiesik a listából és a megmaradtak közül a soron következő lesz hely szerint hivatkozható
