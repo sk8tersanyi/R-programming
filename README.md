@@ -14,8 +14,13 @@ Alapvető függvények használata, illetve különleges tulajdonságai.
 </blockquote>
 
 ### FOR ciklus
-* 
+* indexeken tudunk ugrálni - ahogyan azt már megszokhattuk
+* viszont van lehetőség rögtön indexek nélkül az elemeken végigmenni, ekkor a porgramkód így nézhet ki:
+<blockquote>
+  <p> x <- c("a", "b", "c", "d") </p>
+  <p> for(letter in x) { print(letter) } </p>
+</blockquote>
 
 
-+ ha egy függvényen belül csak egy utasítás van, akkor a kapcsos zárójelek elhagyhatóak
+* ha egy függvényen belül csak egy utasítás van, akkor a kapcsos zárójelek elhagyhatóak
 
