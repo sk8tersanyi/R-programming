@@ -31,8 +31,9 @@ Alapvető függvények használata, illetve különleges tulajdonságai.
 * a _repeat_ függvény végtelen ciklus generálására használható ( például konvergencia feltevések megsejtésére )
 * egyedül a _break_ segítségével tudunk kilépni a ciklusból
 * nem érdemes használni, mivel ha nincs például konvergencia, akkor nem fog figyelmeztetni, hogy nem áll meg soha - inkább egy nagy iterációszámú _for_ ciklust használjunk
-* 
+* a _next_ függvénnyel iterációkat tudunk átlépni - ahogyan azt megszokhattunk
+* a _return_ függvénnyel függvényekből tudunk kilépni - ahogyan azt megszokhattuk
 
 
-* ha egy függvényen belül csak egy utasítás van, akkor a kapcsos zárójelek elhagyhatóak
+Ha egy függvényen belül csak egy utasítás van, akkor a kapcsos zárójelek elhagyhatóak. Fontos megjegyezni, hogy ezeket az alapfüggvényeket főleg akkor használjuk, mikor függvénykeet írunk. Ha parancssorból akarunk bármit is csinálni, akkor érdemes használni a majd későbbiekben taglalt _apply_ függvényt.
 
