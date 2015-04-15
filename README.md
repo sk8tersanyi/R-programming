@@ -44,3 +44,5 @@ Ha egy függvényen belül csak egy utasítás van, akkor a kapcsos zárójelek 
 <blockquote>
   <p> above <- function(v, n = 10) { v[v > n] } </p>
 </blockquote>
+* az eddigiekhez hasonlóan, a függvények szintén, mint objektumok vannak eltárolva
+* továbbá ugyanúgy, mint az összes többi programozási nyelvben a függvények itt is _"first-class-object"_-ként vannak eltárolva, ami annyit tesz, hogy képesek vagyunk egy függvény argumentumába függvényt meghívni
