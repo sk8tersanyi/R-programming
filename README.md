@@ -63,3 +63,6 @@ Ha egy függvényen belül csak egy utasítás van, akkor a kapcsos zárójelek 
 * továbbá akkor is ezt használjuk, mikor a függvényünknek előre nem meghatározható számú bemenő változója van - ilyen lehet a stringek összefűzésére használt _paste_ függvény
 * sőt amikor csak megnézzük, hogy egy egy függvénym ilyen metódusokat használ, akkor is van szerepe - ez majd később lesz!
 * nagyon fontos megjegyezni, hogy minden _..._ argumentum után szereplő változó nevére csak és kizálóag teljes név alapján lehet hivatkozni!!!!!
+
+### Túlterhelés
+*
