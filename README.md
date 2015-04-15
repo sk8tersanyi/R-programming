@@ -54,3 +54,9 @@ Ha egy függvényen belül csak egy utasítás van, akkor a kapcsos zárójelek 
 * akkor érdemes név szerint hívni változót, ha a függvény legtöbb változóját mint alapértelmezett érték használjuk és amit felülírnánk az pedig nem az első helyen van - például az ábrázoló függvényeknél, ugyanis itt rengeteg beállítási lehetőségünk van
 * megtörténhet az is, hogy nem emlékszünk az egyes változó nevére, ekkor sem kell elkeseredni, ugyanis van lehetőség részleges név szerinti egyezéssel definiálni egy változót a függvényben
 * összegezve, egy függvényen belül az argumentumokat úgy nézi át a program, hogy először megnézni név szerint hol van teljes egyezés - ezeket ekkor értelemszerűen felülírja, ezután megnézi a részleges név szerinti egyezést, majd a pozíció szerintit
+* ugyanúgy. mint a legtöbb programnyelve esetén, itt is lehetőségünk van _lusta kiértékelés_-re, ami annyit jelent, hogy ha egy függvényben, egy adott változót nem használunk fel ( a függvény definíciója során ), akkor meghívás esetén nem szükségszerű értéket adni neki
+* persze ha kihagyunk egy olyan változót melyet a definíció során felhasználtunk, akkor a függvény meghívása során addig értékelődik ki amíg az őt tartalmazó sorig el nem jutottunk, aztán egy hibaüzenettel megáll a futás
+* érdekes függvény argumentum az úgynevezett _..._ argumentum, melyet elsősorban arra használunk, hogy feltüntessünk olyan változókat, melyek még ott vannak, de nem szükségszerű definiálni őket - például ha egy már megírt függvény alapértelmezett értékeinek változtatásával szeretnénk egy új függvény írni ( felhasználva a már elkészültet ) akkor a következőt írhatjuk:
+<blockquote>
+  <p> myplot <- function(x, y, type = "l", ...) { plot(x, y, type = type, ... } </p>
+</blockquote>
