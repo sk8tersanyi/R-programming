@@ -42,8 +42,5 @@ Ha egy függvényen belül csak egy utasítás van, akkor a kapcsos zárójelek 
 * nem szükséges a _return_ -t használni a visszaadandó értéknél, ugyanis az utolsó sorban található kifejezés lesz a visszatérési érték automatikusan
 * egy függvény adott paraméterének tudunk alapértéket adni, azaz, ha a felhasználó nem adja meg a szükséges értéket, akkor a megadott alapérték mellett történik a függvény futtatása - ezt a következőképp lehet megtenni ( a példafüggvény visszaadja egy vector n-nél nagyobb elemeit, ahol n alapértéke 10 lesz ):
 <blockquote>
-  <p> above <- function(v, n = 10) </p>
-  <p> { </p>
-  <p>   v[v > n] </p>
-  <p> } </p>
+  <p> above <- function(v, n = 10) { v[v > n] } </p>
 </blockquote>
