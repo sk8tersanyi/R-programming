@@ -13,3 +13,9 @@ Alapvető függvények használata, illetve különleges tulajdonságai.
   <p> y <- if(x > 3) { 10 } else { 0 }</p>
 </blockquote>
 
+### FOR ciklus
+* 
+
+
++ ha egy függvényen belül csak egy utasítás van, akkor a kapcsos zárójelek elhagyhatóak
+
