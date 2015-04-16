@@ -69,3 +69,11 @@ Ha egy függvényen belül csak egy utasítás van, akkor a kapcsos zárójelek 
 * gyakorlatban ez a keresési lista - hogy a program milyen sorrendben nézi végig az eléhető helyeket - a _search_ függvény segítségével tekinthető meg
 * a lista első eleme mindig a _global environment_ míg az utolsó pedig az alapfüggvényeket tartalmazó _base_ package
 * amennyiben egy felhasználó új csomagot hív meg, akkor az a keresési listában a második helyet foglalja majd el, a többi ( a global environment-et kivéve ) pedig eggyel lejjebb csúszik
+* fontos megjegyezni, hogy a függvény  és nemfüggvény objektumok elkülönülő környezetben találhatóak, így meg lehet tenni hogy egy szimpla változónak olyan nevet adunk ami már egy függvényt reprezentál
+
+### Változók hatásköre
+* a probléma a követketkező, minden függvényben szerepelhetnek úgynevezett _szabad változók_, azaz olyan változók, melyek a függvény argumentumába nincsenek feltüntetve, egy ilyen esetén hogyan találja meg a program a nei szánt megfelelő értéket - az alábbi példában z a szabad változó
+<blockquote>
+  <p> f <- function(x, y) { x^2 + y / z } </p>
+</blockquote>
+* 
