@@ -125,4 +125,19 @@ Ha egy függvényen belül csak egy utasítás van, akkor a kapcsos zárójelek 
 * a program különböző részet taglaljuk jól, így nem csak az átlthatóságot növeljük, hanem debuggolásben is segíthet
 
 ### Dátum és Idő
+* R-ben külön osztály van a dátumok reprezentálására, ez nem más mint a _Date_ 
+* míg az idő reprezentálására két osztályt használhatunk, ezek: _POSIXct_ és _POSIXlt_
+* dátumok és idők eltárolásá az 1970 január 1. időponttól történik, mint egynumerikus érték, mely dátum esetén az eltelt napok számát reprezentálja, idő esetén pedig az eltelt másodpercek számát
+* az _as.Date_ függvény segítségével tudunk YMD formátumban megadott dátum sztringeket dátummá konvertálni
+* a _POSIXct_ formátumot használjuk idő tárolására abban az esetben, ha data frame-re van szükségünk - ekkor az időt reprezentáló egész szám nagyon nagy érték
+* míg ezzel szemben a _POSIXlt_ formátum az idő listában tárolja, ahol ezen lista olyan további hasznos információkat is tartalmaz, mint, hogy az adott dátum napja a hét melyik napjár esett, vagy hányadik napja volt az adott évnek
+* sok úgynevezett _generikus függvény_ ( azt nevezzük generikusnak melynek több típusa is lehet ) is van dátumokra és időre, ilyen például a _weekday_, mely megadja hogy az adott nap a hét melyik napjára esett, vagy a _month_, mely visszaadja az adott számmal reprezentált hónap nevét, ... stb
+* tudunk típuskonverziót használni idő esetén is, ez nem meglepően az _as.POSIXlt_ és _as.POSIXct_ függvényekkel történik
+* ahhoz hogy le tudjuk kérdezni az a _POSIXlt_-ben tárolt plusz információkat, a megadott időre alkalmazzuk az _unclass_ függvényt, ezután a $ jel segítségével tudunk hivetkozni az időt leíró adatokra, mint ahogyan azt egy listától el lehet várni
+* ha szeretnénk kölünböző sztring formátumban megadott dátumokat azonos ( _POSIXct, vagy _POSIXlt_ ) formátumúra hozni, akkor erre a célra használhatjuk az _strptime_ függvényt - a formális argumentumok jelentése a help segtségével megnézhető
+* különböző osztályokból származtatott dátumok és idők között nem lehet műveleteket végezni, így minden művelet előtt érdemes típuskonverzót végrehajtani
+* azért érdemes ezeket a beépített függvényeket használni, mivel nagyon jól kezelik azokat a bajos dolgokat, mint a szökőéve, téli-nyári időszámítás és időzóna fogalma
+* érdemes megnézni, hogy dátum objektumok ábrázolását milyen jól kezeli az R
+
+## Harmadik hét
 * 
