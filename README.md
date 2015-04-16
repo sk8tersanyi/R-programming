@@ -90,5 +90,9 @@ Ha egy függvényen belül csak egy utasítás van, akkor a kapcsos zárójelek 
   <p>       pow <- function(x) {x^n} </p>
   <p>       pow }   </p>
 </blockquote>
-
-
+* ezen példában szereplő hatvány függvénnyel úgy tudunk egy négyzetre emelést végrehajtó függvényt készíteni, hogy:
+<blockquote>
+  <p> square <- make.pow(2) </p>
+</blockquote>
+* egy adott függvény környezetének lekérdezése az _environment_ függvény segítségével történik
+* további programozási nyelvek esetén beszélhetünk _dinamikus hatáskör_-ről is - ez alatt azt kell érteni, hogy egy függvényben szereplő szabad változó értékét NEM abban a környezetben keressük, ahol a függvény definálva volt, hanem ahol meghívtuk
