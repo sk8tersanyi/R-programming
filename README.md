@@ -96,3 +96,15 @@ Ha egy függvényen belül csak egy utasítás van, akkor a kapcsos zárójelek 
 </blockquote>
 * egy adott függvény környezetének lekérdezése az _environment_ függvény segítségével történik
 * további programozási nyelvek esetén beszélhetünk _dinamikus hatáskör_-ről is - ez alatt azt kell érteni, hogy egy függvényben szereplő szabad változó értékét NEM abban a környezetben keressük, ahol a függvény definálva volt, hanem ahol meghívtuk
+<blockquote>
+  <p> y <- 10 </p>
+  <p> f <- function(x) {y <- 2; y^2 + g(x)} </p>
+  <p> g <- function(x) {x*y} </p>
+</blockquote>
+* _lexikus hatáskör_ esetén y értéke 10 lesz, míg _dinamikus hatáskör_ esetén pedig 2
+* előfordulhat, hogy egy függvényt a globális környezetben definiálunk, majd később innen is hívjuk meg, ekkor olyan mintha dinamikus hatáskörrel lenne dolgunk
+* ennek az egésznek az értelme abban rejlik, hogy a nagy adathalmaz miatt nagyon sok memóriát kéne felhasználni akár egyszerű műveletek elvégzésére, így ennek segítségével tudunk spórolni, továbbá mivel minden függvényt pointerekkel hivatkozunk, így további komplexitásokat tudunk elkerülni
+* 
+
+
+### Optimalitás
