@@ -104,7 +104,14 @@ Ha egy függvényen belül csak egy utasítás van, akkor a kapcsos zárójelek 
 * _lexikus hatáskör_ esetén y értéke 10 lesz, míg _dinamikus hatáskör_ esetén pedig 2
 * előfordulhat, hogy egy függvényt a globális környezetben definiálunk, majd később innen is hívjuk meg, ekkor olyan mintha dinamikus hatáskörrel lenne dolgunk
 * ennek az egésznek az értelme abban rejlik, hogy a nagy adathalmaz miatt nagyon sok memóriát kéne felhasználni akár egyszerű műveletek elvégzésére, így ennek segítségével tudunk spórolni, továbbá mivel minden függvényt pointerekkel hivatkozunk, így további komplexitásokat tudunk elkerülni
-* 
-
 
 ### Optimalitás
+* az eddig elmondottak szerepe akkor lesz igazán nyilvánvaló, ha valamilyen statisztikai probléma megoldása esetén az optimalitási dolgok is bekürlnek a buliba
+* pár R-ben található optimalizáló rutin: _optim_, _nlm_, _optimize_; ezek paraméternek egy függvényt kapnak meg, mely argumentuma egy vektor és adott intervallumban próbálják megkeresni a szükséges paraméterre vonatkozó minimumot, illetve maximumot
+* statisztikában előfordulhat, hogy a az optimalizálandó célfüggvény maximuma/minimuma nem csak a paramétertől, hanem példauál magától az adathalmaztól is függ - így felmerül a probléma, hogy hogyan lehetne ez jól átláthatóan megvalósítani
+* az első fontos gondolat, hogy eltároljuk azon paramétereket melyek fixek az optimalizálás során - ezt tesszük az úgynevezett _konstruktor_ segítségével, melyet itt úgy használunk, hogy a fixált paramétereket megadjuk, így a tényleges meghívás esetén a tárgyfüggvényben már ezeket ne mkell újra megadni
+* R-ben minden optimalizáló függvény minimumot számít, így maximum számításához mínusz eggyel kell szorozni!!!!!
+* azaz a korbbi hatáskör tulajdonságok miatt lehetőségünk van olyan olyan függvényeket generálni konstruktorokkal, melyek a fixált értékeket már alapból tartalmazzák, így például optimalizálás eseén nem kell mindent megint újra bevinni ( nem lesznek hosszú argumentum listák )
+* Robert Gentleman & Ross Ihaka - Lexical Scope and Statistical Computing (2000): https://www.stat.auckland.ac.nz/~ihaka/downloads/lexical.pdf
+
+
