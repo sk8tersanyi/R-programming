@@ -114,4 +114,15 @@ Ha egy függvényen belül csak egy utasítás van, akkor a kapcsos zárójelek 
 * azaz a korbbi hatáskör tulajdonságok miatt lehetőségünk van olyan olyan függvényeket generálni konstruktorokkal, melyek a fixált értékeket már alapból tartalmazzák, így például optimalizálás eseén nem kell mindent megint újra bevinni ( nem lesznek hosszú argumentum listák )
 * Robert Gentleman & Ross Ihaka - Lexical Scope and Statistical Computing (2000): https://www.stat.auckland.ac.nz/~ihaka/downloads/lexical.pdf
 
+### Kódolási sztenderd
+* a könnyebb áttekinthetőség értelmében érdemes pár kinézetre vonatkozó, alapvető programozási szabályt - ezek szubjektív dolgok - betartani
+* az első, hogy a kódot mindig valamilyen text fájlba csináljuk, például RStudio esetén erre a célra tökéletesen megfelel az a felület ahova a szkript fájlunkat írjuk
+* a második, hogy próbáljunk meg nagyobb bekezdéstávolságokat használni - érdemes négynél több karakterre gondolni - ez RStudio esetén az Options opció alatt érhető el
+* a harmadik, hogy korlátozzuk a sorok hosszát, azaz kizárjuk annak a lehetőségét, hogy átláthatatlanul hosszú kódokat írjunk - ennek alapértelmezett érték 80 oszlop RStudio-ban
+* a negyedik, hogy korlátozzunk az egyes függvények sorainak számát
+* ha nagy bekezdésekkel dolgozunk, akkor átértékeljük az egymásba ágyazott ciklusok használatát, ami alapjáraton egy jó dolog
+* a függvényeink neve ténylegesen a működésüket reprezentálja!
+* a program különböző részet taglaljuk jól, így nem csak az átlthatóságot növeljük, hanem debuggolásben is segíthet
 
+### Dátum és Idő
+* 
