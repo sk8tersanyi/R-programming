@@ -65,4 +65,7 @@ Ha egy függvényen belül csak egy utasítás van, akkor a kapcsos zárójelek 
 * nagyon fontos megjegyezni, hogy minden _..._ argumentum után szereplő változó nevére csak és kizálóag teljes név alapján lehet hivatkozni!!!!!
 
 ### Túlterhelés
-*
+* a kérdés a következő, ha van két azonos nevű függvényünk, akkor honnan tudja a program, hogy aktuálisan melyik függvényt hívjuk meg - nem meglapően az az ötelt, hogy miden szimbólumhoz egy-egy értéket értéket rendelünk, így itt is az történik, hogy a megfelelő helyen keressük a megfelelő értéket
+* gyakorlatban ez a keresési lista - hogy a program milyen sorrendben nézi végig az eléhető helyeket - a _search_ függvény segítségével tekinthető meg
+* a lista első eleme mindig a _global environment_ míg az utolsó pedig az alapfüggvényeket tartalmazó _base_ package
+* amennyiben egy felhasználó új csomagot hív meg, akkor az a keresési listában a második helyet foglalja majd el, a többi ( a global environment-et kivéve ) pedig eggyel lejjebb csúszik
