@@ -95,7 +95,7 @@ Ha egy függvényen belül csak egy utasítás van, akkor a kapcsos zárójelek 
   <p> square <- make.pow(2) </p>
 </blockquote>
 * egy adott függvény környezetének lekérdezése az _environment_ függvény segítségével történik
-* további programozási nyelvek esetén beszélhetünk _dinamikus hatáskör_-ről is - ez alatt azt kell érteni, hogy egy függvényben szereplő szabad változó értékét NEM abban a környezetben keressük, ahol a függvény definálva volt, hanem ahol meghívtuk
+* további programozási nyelvek esetén beszélhetünk _dinamikus hatáskör_-ről is - ez alatt azt kell érteni, hogy egy függvényben szereplő szabad változó értékét NEM abban a környezetben keressük, ahol a függvény definálva volt, hanem ahol meghívtuk ( ezen környezetet _meghívó környezetnek_ szokás nevezni, R esetén _parent frame_-nek )
 <blockquote>
   <p> y <- 10 </p>
   <p> f <- function(x) {y <- 2; y^2 + g(x)} </p>
