@@ -76,4 +76,19 @@ Ha egy függvényen belül csak egy utasítás van, akkor a kapcsos zárójelek 
 <blockquote>
   <p> f <- function(x, y) { x^2 + y / z } </p>
 </blockquote>
-* 
+* akkor beszélhetünk _lexikus, vagy statikus hatáskör_-ről egy szabad változó esteén, ha annak értékét azon függvény környezetében keressük, ahol az a változó definiálva volt
+* a _környezet_ alatt (szimbólum, érték) párok gyűjteményét értjük, továbbá minden ilyen _környezet_-enk létezik egy _szülő környezet_-e, mely úgymond tartalmazza azt
+* előfordulhat, hogy egy környezetnek több gyereke van, de minden környezetnek csak egy szülője lehet
+* egyedül csak az _üres környezet_-nek nem létezik szülő környezete
+* az egyes _package_-ek _namespace_-ei is környezetet alkotnak
+* _closure_ = _function_ + _environment_ - ez fontos struktúra, amit érdemes megjegyezni
+* térjünk vissza arra, hogyan is keresi egy ilyen szabad váltzó értékét a program - először megnézi a függvényt tartalmazó környezetben, ezután ennek a szülő környezetében, és így tovább, amíg el nem érjük a legfelső szinten található környezetet, ami általában a _global environment_, vagy az adott package namespace-e
+* ha ezen legfelső szinten lévő környezetekben sem találjuk a megfelelő értéket akkor a mér korábban említett _search_ listában a sorrendben következő elemre ugrunk; ezt az egészet addig iterájuk, míg el nem érjük az üres környezetet - ha itt sem találjuk meg a megfelelő értéket, akkor a programunk hibaaüzenetet fog adni
+* felmerülhet a kérdés, hogy mégis mi az értelme ennek az egésznek - előfordulhat hogy egy függvény visszatérési értéke szintén egy függvény, és így az a környezet ahol a függvény definiálva van nem a globális környezet lesz
+<blockquote>
+  <p> make.power <- function(n) {  </p>
+  <p>       pow <- function(x) {x^n} </p>
+  <p>       pow }   </p>
+</blockquote>
+
+
