@@ -197,4 +197,9 @@ Az úgynevezett _ciklus függvények_ ( _loop functions_ )  - mintha valami cikl
 * négy argumentummal rendelkezik: az első a hasítandó objektum; a második a hasítást reprezentáló faktor, vagy faktorok listája, a harmadik ( drop ) az üres szintek elhagyaását megadó indikátor; míg a negyedik egy ... argumentum
 * a _split_ függvény által visszaadott objektum egy lista lesz
 * persze a korábbiakban taglaltak miatt látható, hogy példaául vektorok esetén, ahelyett hogy ilyen függvény összetételeket gyártanánk használhatunk szimplán _tapply_ ciklus függvényt is
-* a _split_ függvény igazi ereje abban nyílvánul meg, hogy segítségével képesek vagyunk sokkal összetettebb objektumokat is hasítani
+* a _split_ függvény igazi ereje abban nyílvánul meg, hogy segítségével képesek vagyunk sokkal összetettebb objektumokat is hasítani - például egy data frame esetén tudunk egy egy oszlop elemei szerint hasítani a _split_ függvénnyel
+* megjegyezendő, hogy tudunk vektor szerint is hasítani, ugyanis a függvény megvalósítása ilyen
+* a diákon nagyon jó példák vannak, amiket most nem írnék ide - mert ronda formátumban tolom - de mindenképp érdemes átbogarászni őket
+* előfordulhat, hogy nem csak egy faktorunk van, hanem egyszerre több, például ez van akkor, ha van egy nemet és egy rasszt reprezentáló érték is; ilyen esetben használható az úgynevezett _interaction_ függvény, mely kombinálja az egyes szinteket - ennek OUTPUT-ja szintén egy faktor lesz, melyben ilyen indexelt elemek vannak
+* ha ilyen összevont faktorokkal dolgozunk, akkor sokszor keletkeznek olyan szintek, melyek üresek, ezeket a korábban említett drop argumentum igazra állításával ki tudunk hagyni a végeredményből
+* szintén megjegyezendő, hogy ahogyan már korábban említettük lehet faktorok listái szerint hasítani, így ilyen alfaktorok esetén nem feltételenül kell az _interaction_ függvényt használni
