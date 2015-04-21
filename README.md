@@ -140,4 +140,23 @@ Ha egy függvényen belül csak egy utasítás van, akkor a kapcsos zárójelek 
 * érdemes megnézni, hogy dátum objektumok ábrázolását milyen jól kezeli az R
 
 ## Harmadik hét
-* 
+Az úgynevezett _ciklus függvények_ ( _loop functions_ )  - mintha valami ciklust csinálnának meg kompakt formában, így akár konzolról is können szerkezthető - használata és tulajdonságai, továbbá alapvető debuggolás.
+
+### _lapply_ függvény
+* végigmegy az argumentumában szereplő lista objektumain és ezekre alkalmazza a további bemenetként megadott függvényt
+* három argumentuma van: az első, melyben a listát adhatjuk meg; a második, ahol az alkalmazandó fggvényt adjuk meg; míg az utolsó egy ... argumentum, melyben az előbbi függvény paramétereit tudjuk beállítani
+* ha a megadott első argumentum mégsem egy lista, akkor meghívás esetén az lapply azzá teszi, ha ez lehetséges, különben hibaüzenetet ad
+* ha meghívjuk argumentumok nélkül, akkor látható, hogy maga a függvény nem valami nagyon bonyolult szerekezetű dolog, illetve, hogy a megvalósítás, a sebesség maximalizálása érdekében, C nyelven történik
+* a meghívott függvény által kiszámolt értékeket a _lapply_ listába rendezve adja vissza - az iménti példában egyenletes eloszlásból generálunk számokat, méghozzá úgy, hogy a lista elemében egy darabot, másodikban kettőt, stb.
+<blockquote>
+  <p> y <- 1:5 </p>
+  <p> lapply(y, runif) </p>
+</blockquote>
+* fontos mégegyszer kiemelni, hogy a _lapply_ függvény harmadik, ... argumentumában adhatjuk meg a kiértékelendő függvény további paramétereit 
+* az _lapply_ és a hozzá hasonló ( továbbiakban kifejtendő ) ciklus függvények nagyszerű tulajdonsága, hogy segítségükkel tudunk úgynevezett _névtelen függvényeket_ meghívni; ezek alatt olyan függvényeket értünk, melyeknek nincs nevük
+* ezt úgy kell elképzelni, hogy a kiértékelendő függvényt a a _lapply_ függvényen belül definiáljuk, ahogyan ez a következő példában is látszik - a listában szereplő mátrixok első oszlopát adja vissza
+<blockquote>
+  <p> x <- list(a = matrix(1:4, 2), b = matrix(6:1, 3)) </p>
+  <p> lapply(x, function(elt) elt[1,]) </p>
+</blockquote>
+* habár ez egy elég bugyuta példa és így nem teljesen látható, de az ilyen ciklus függvények ereje pont a névtelen függvények használatában rejlik
