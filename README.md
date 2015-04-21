@@ -195,4 +195,6 @@ Az úgynevezett _ciklus függvények_ ( _loop functions_ )  - mintha valami cikl
 * ez a függvényk issé kilóg a sorból, ugyanis nem ciklus függvény, viszont nagyon hasznos lehet egy egy ilyennel együtt ( összetetten ) alkalmazva
 * a _split_ függvény segítségével vektorokat és más objektumok elemeit tudjuk különböző csoportokba rendezni
 * négy argumentummal rendelkezik: az első a hasítandó objektum; a második a hasítást reprezentáló faktor, vagy faktorok listája, a harmadik ( drop ) az üres szintek elhagyaását megadó indikátor; míg a negyedik egy ... argumentum
-* 
+* a _split_ függvény által visszaadott objektum egy lista lesz
+* persze a korábbiakban taglaltak miatt látható, hogy példaául vektorok esetén, ahelyett hogy ilyen függvény összetételeket gyártanánk használhatunk szimplán _tapply_ ciklus függvényt is
+* a _split_ függvény igazi ereje abban nyílvánul meg, hogy segítségével képesek vagyunk sokkal összetettebb objektumokat is hasítani
