@@ -203,3 +203,5 @@ Az úgynevezett _ciklus függvények_ ( _loop functions_ )  - mintha valami cikl
 * előfordulhat, hogy nem csak egy faktorunk van, hanem egyszerre több, például ez van akkor, ha van egy nemet és egy rasszt reprezentáló érték is; ilyen esetben használható az úgynevezett _interaction_ függvény, mely kombinálja az egyes szinteket - ennek OUTPUT-ja szintén egy faktor lesz, melyben ilyen indexelt elemek vannak
 * ha ilyen összevont faktorokkal dolgozunk, akkor sokszor keletkeznek olyan szintek, melyek üresek, ezeket a korábban említett drop argumentum igazra állításával ki tudunk hagyni a végeredményből
 * szintén megjegyezendő, hogy ahogyan már korábban említettük lehet faktorok listái szerint hasítani, így ilyen alfaktorok esetén nem feltételenül kell az _interaction_ függvényt használni
+
+### Debuggolás
