@@ -185,4 +185,7 @@ Az úgynevezett _ciklus függvények_ ( _loop functions_ )  - mintha valami cikl
   <p> list(rep(1,4), rep(2,3), rep(3,2), rep(4,1)) </p>
   <p> mapply(rep, 1:4, 4:1) </p>
 </blockquote>
-* 
+
+### _tapply_ függvény
+* ezzel a ciklus függvénnyel vektorok részvektorain - azaz elemeinek részosztályain - tudunk függvényeket kiértékelni
+* öt argumentuma van: az első az a vektor melyen a számítást végezzük; a második, az elsővel megegyező hosszúságú faktor, mely az egyes csoportok elemeit reprezentálja; a harmadik a kiértékelendő függvény; a negyedik a szokásos ... argumentum; míg az  utolsó ( simplify ) az eredmény egyszerűsítését meghatározó logikai változó ( mint az _sapply_-nál ) 
