@@ -180,9 +180,9 @@ Az úgynevezett _ciklus függvények_ ( _loop functions_ )  - mintha valami cikl
 * a korábban taglalt _lapply_ és _sapply_ ciklus függvények többváltozós általánosítása, ahol a többváltozós alatt azt kell érteni, hogy a kiértékelendő függvény több argumentummal rendelkezik és ezen értékeket különböző listákban tároljuk
 * lehetne FOR ciklussal is, de ha az _mapply_-t használjuk akkor párhuzamosan dolgozunk, ami elég jó
 * négy argumentuma van: az elsőben adjuk meg a kiértékelendő függvényt; a második egy ... argumentum, melyben ez egyes megadandó argumentumoknak megfelelő mennyiségű listát adhatjuk meg; a harmadik ( MoreArgs ) argumentumban a kiértékelendő függvény egyéb paramétereinek listáját adhatjuk meg; míg negyedik ( SIMPLIFY ) argumentumban azt ,hogy az output milyen tipusú legyen ( ugyanaz történik, mint _sapply_-nál ) - még van egy ötödik, mely az OUTPUTlistájának neveire vonatkozó logikai változó
-* ezekből kiderül, hogy megint arról van szó, hogy szeretnénk kevesebbet gépelni, például:
+* ezekből kiderül, hogy megint arról van szó, hogy szeretnénk kevesebbet gépelni - például, az első helyett érdemes a másodikat használni:
 <blockquote>
-  <p> list(rep(1,4), rep(2,3), rep(3,2), rep(4,1)) #ehelyett a következőt érdemes írni </p>
+  <p> list(rep(1,4), rep(2,3), rep(3,2), rep(4,1)) </p>
   <p> mapply(rep, 1:4, 4:1) </p>
 </blockquote>
 * 
