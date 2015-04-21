@@ -190,3 +190,9 @@ Az úgynevezett _ciklus függvények_ ( _loop functions_ )  - mintha valami cikl
 * ezzel a ciklus függvénnyel vektorok részvektorain - azaz elemeinek részosztályain - tudunk függvényeket kiértékelni
 * öt argumentuma van: az első az a vektor melyen a számítást végezzük; a második, az elsővel megegyező hosszúságú faktor, mely az egyes csoportok elemeit reprezentálja; a harmadik a kiértékelendő függvény; a negyedik a szokásos ... argumentum; míg az  utolsó ( simplify ) az eredmény egyszerűsítését meghatározó logikai változó ( mint az _sapply_-nál ) 
 * ha az egyszerűsítést nem állítjuk be, akkor az eredményt egy listában kapjuk vissza, ahol e lista nevei pont a megfelelő faktorok szintjei lesznek
+
+### _split_ függvény
+* ez a függvényk issé kilóg a sorból, ugyanis nem ciklus függvény, viszont nagyon hasznos lehet egy egy ilyennel együtt ( összetetten ) alkalmazva
+* a _split_ függvény segítségével vektorokat és más objektumok elemeit tudjuk különböző csoportokba rendezni
+* négy argumentummal rendelkezik: az első a hasítandó objektum; a második a hasítást reprezentáló faktor, vagy faktorok listája, a harmadik ( drop ) az üres szintek elhagyaását megadó indikátor; míg a negyedik egy ... argumentum
+* 
