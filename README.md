@@ -160,3 +160,22 @@ Az úgynevezett _ciklus függvények_ ( _loop functions_ )  - mintha valami cikl
   <p> lapply(x, function(elt) elt[1,]) </p>
 </blockquote>
 * habár ez egy elég bugyuta példa és így nem teljesen látható, de az ilyen ciklus függvények ereje pont a névtelen függvények használatában rejlik
+
+### _sapply_ függvény
+* az előbb taglalt _lapply_ függvény által visszaadott OUTPUT-ot egyszerűsíti, amennyiben ez persze lehetséges
+* ha az _lapply_ függvény eredménye egy olyan lista, mely minden eleme egy hosszú, akkor ha az _sapply_ függvényt használjuk, egy vektort kapunk vissza
+* amennyiben az _lapply_ függvény eredménye egy olyan lista, mely minden eleme azonos hosszú vektor, akkor ha az _sapply_ függvényt használjuk, egy mátrixot kapunk vissza
+* persze ha nem tudja elvégezni ezeket az egyszerűsítéseket, akkor az _lapply_-hoz hasonlóan listát ad vissza
+
+### _apply_ függvény
+* az _apply_ függvény egy olyan ciklus függvény, mellyel egy tömb indexein tudunk függvényeket kiértékelni
+* ez a tömb leggyakrabban egy mátrix és így ennek indexei nem mások, mint a mátrix sorai, illetve oszlopai - emellett van lehetőség általánosabb ( magasabb dimenziós ) tömbök indexein számolni
+* a közhiedelemmel ellentétben használata nem azért ajánlott, mert gyorsabb, mint egy ciklus, hanem mert kevesebbet kell gépelni ( régen volt csak igaz!!! )
+* négy argumentuma van: az első maga a tömb; a második egy egész értékű vektor mellyel meghatározzuk, hogy a tömb mely dimenzióin akarunk függvényt alklamazni; a harmadik a kiértékelendő függvény; míg a negyedik egy a korábbiakból értelemszerűen következő ... argumentum, melyben az előbbi függvény további paramétereit tudjuk beállítani
+* legegyszerűbb - két dimenziós - esetben úgy kell elképzelni, hogy az _apply_ függvény második változójában adjuk meg, hogy melyik dimenzió az amit rögzítünk, azaz ha 1-et írunk, akkor a mátrix soarira fogjuk kiértékelni a megadott függvényt
+* fontos megjegyezni, hogy ebben a speciális esetben, ha összeget, vagy átlagot akarunk számolni, nem érdemes az _apply_ függvényt használni, ugyanis vannak futási időben optimalizált beépített függvényeink erre a célra, melyek nevei értelemszerűek: _rowSums_, _rowMeans_, _colSums_, _colMeans_. ( ezek sebbességbeli éltérése nagy adathalmaz esetén látható !! ) - ugyanezen függvények magasabb dimenzióban is működnek !!!
+* többdimenziós tömbökre való alkalmazásnál érdemes lenne átgondolni, hogy hogyan is "néz ki" az összegzés
+* 
+
+### _mapply_ függvény
+* 
