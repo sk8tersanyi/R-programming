@@ -175,7 +175,8 @@ Az úgynevezett _ciklus függvények_ ( _loop functions_ )  - mintha valami cikl
 * legegyszerűbb - két dimenziós - esetben úgy kell elképzelni, hogy az _apply_ függvény második változójában adjuk meg, hogy melyik dimenzió az amit rögzítünk, azaz ha 1-et írunk, akkor a mátrix soarira fogjuk kiértékelni a megadott függvényt
 * fontos megjegyezni, hogy ebben a speciális esetben, ha összeget, vagy átlagot akarunk számolni, nem érdemes az _apply_ függvényt használni, ugyanis vannak futási időben optimalizált beépített függvényeink erre a célra, melyek nevei értelemszerűek: _rowSums_, _rowMeans_, _colSums_, _colMeans_. ( ezek sebbességbeli éltérése nagy adathalmaz esetén látható !! ) - ugyanezen függvények magasabb dimenzióban is működnek !!!
 * többdimenziós tömbökre való alkalmazásnál érdemes lenne átgondolni, hogy hogyan is "néz ki" az összegzés
-* 
 
 ### _mapply_ függvény
+* a korábban taglalt _lapply_ és _sapply_ ciklus függvények többváltozós általánosítása, ahol a többváltozós alatt azt kell érteni, hogy a kiértékelendő függvény több argumentummal rendelkezik és ezen értékeket különböző listákban tároljuk
+* lehetne FOR ciklussal is, de ha az _mapply_-t használjuk akkor párhuzamosan dolgozunk, ami elég jó
 * 
