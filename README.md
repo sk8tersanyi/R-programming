@@ -218,8 +218,13 @@ Az úgynevezett _ciklus függvények_ ( _loop functions_ )  - mintha valami cikl
 ### Debug függvények
 * a következőkben öt ilyen debuggoló függvényt veszünk át - ezeket nem muszáj használni, de néha nagyon jól használhatóak
 * az úgynevezett _traceback_ függgvény a konzolon megjeleníti az adott függvény hívási listáját addig a pontig ameddig a hiba fel nem tűnik
+* ezt a hiba után kell meghívni közvetlenül, ugyanis a _traceback_ az épp aktuális hibára vonatkozik
 * a _debug_ függvény segítségével a debug módba léphetünk át, ahol mindössze arról van szó, hogy az adott függvényünket tudjuk soronként futtatni, így pontosan meg tudjuk határozni, hogy a hiba melyik sorban van
+* először meghívjuk a debuggolásra szánt függvénnyel mint argumentummal, majd utána a hibás függvényt és a megjelenő _Browse_ sorba n-eket gépelve ugrálunk sorrol sorra
+* van lehetőség a _debug_ függvény meghívása közben egy belső függvényre ugyanúgy meghívni a _debug_ függvényt
 * a _browser_ függvény hasonlóan működik az előbbihez, avval a különbséggel, hogy itt egy megadott pontig futtatjuk a függvényt rendesen és majd csak onnan kezdjük el soronként nézni
 * a _trace_ függvény segítségével egy adott függvénybe tudunk debug kódot írni anélkül, hogy magát a függvényt teleírnánk ( például akkor lehet használni, mikor nem a saját programunkat akarjuk debuggolni )
 * a _recover_ függvény által a hibákat tudjuk alapértelmezettől eltérően kezelni - arra kell gondolni, hogy alapból hiba esetén a program futása félbeszakad és visszatérünk a konzol felületre, a _recover_ által beállítható, hogy a függvény kiértékelése megálljon a hibánál és ne kerüljünk a konzolra
+* ez egy globális beállítási lehetőség ( így nem kerülhető el az _options_ függvény használata )
+* beállítása után egy kezelőfelületre ugrunk, melyen direkt módon kiválasztható, hogy mely felhasznált függvény környezetét szeretnénk megnézni, ezzel gyorsítva a folyamatot
 * persze ezen speciálisan debuggolásra tervezett függvények mellett lehetőség van a hagyomános módszerek használatára is - például mikor teleírjuk print/cat függvényekkel a programunkat
