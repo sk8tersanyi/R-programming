@@ -228,3 +228,4 @@ Az úgynevezett _ciklus függvények_ ( _loop functions_ )  - mintha valami cikl
 * ez egy globális beállítási lehetőség ( így nem kerülhető el az _options_ függvény használata )
 * beállítása után egy kezelőfelületre ugrunk, melyen direkt módon kiválasztható, hogy mely felhasznált függvény környezetét szeretnénk megnézni, ezzel gyorsítva a folyamatot
 * persze ezen speciálisan debuggolásra tervezett függvények mellett lehetőség van a hagyomános módszerek használatára is - például mikor teleírjuk print/cat függvényekkel a programunkat
+* fontos megjegyezni, hogy a debuggolás nem a szent grál, szóval ugyanúgy kell és érdemes gondolkozni programalkotás közben
