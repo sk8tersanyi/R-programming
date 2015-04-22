@@ -205,3 +205,9 @@ Az úgynevezett _ciklus függvények_ ( _loop functions_ )  - mintha valami cikl
 * szintén megjegyezendő, hogy ahogyan már korábban említettük lehet faktorok listái szerint hasítani, így ilyen alfaktorok esetén nem feltételenül kell az _interaction_ függvényt használni
 
 ### Debuggolás
+* ugyanúgy, mint a többi programozási nyelvben, R-ben is akkor beszélünk debuggolásról, mikor egy program futása során hibát kaptunk és szeretnénk megtudni, hogy mi is ez a hiba, illetve, hogy hol található a programon belül
+* az első kérdés, hogy honnan tudjuk meg, hogy a kódunk hibát tartalmaz
+* alapjáraton három különböző szintű jelzést kapunk arról, hogy a programunk hibát tartalmaz
+* az első a _message_, mely csak egy szimpla üzenet és melytől függetlenül a programunk ugyanúgy lefut
+* a második a _warning_, mely figyelmeztet arra, hogy valami nem feltétlenül úgy történt ahogyan mi szerettük volna ( ez nem biztos, hogy egy probléma ), így ettől függetlenül a program lefut - alapértelmezetten ezt a futtatás után kapjuk meg
+* 
