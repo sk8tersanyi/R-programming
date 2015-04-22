@@ -204,7 +204,7 @@ Az úgynevezett _ciklus függvények_ ( _loop functions_ )  - mintha valami cikl
 * ha ilyen összevont faktorokkal dolgozunk, akkor sokszor keletkeznek olyan szintek, melyek üresek, ezeket a korábban említett drop argumentum igazra állításával ki tudunk hagyni a végeredményből
 * szintén megjegyezendő, hogy ahogyan már korábban említettük lehet faktorok listái szerint hasítani, így ilyen alfaktorok esetén nem feltételenül kell az _interaction_ függvényt használni
 
-### Debuggolás
+### Hiba realizálása
 * ugyanúgy, mint a többi programozási nyelvben, R-ben is akkor beszélünk debuggolásról, mikor egy program futása során hibát kaptunk és szeretnénk megtudni, hogy mi is ez a hiba, illetve, hogy hol található a programon belül
 * az első kérdés, hogy honnan tudjuk meg, hogy a kódunk hibát tartalmaz
 * alapjáraton három különböző szintű jelzést kapunk arról, hogy a programunk hibát tartalmaz
@@ -213,4 +213,7 @@ Az úgynevezett _ciklus függvények_ ( _loop functions_ )  - mintha valami cikl
 * az utolsó az _error_, mely akkora problémára hívja fel a figyelmet, amely miatt a programot nem lehet lefuttatni, így maga a program is megáll ( az üzenet stop függvény által generálódik )
 * ezek mind egy általánosabb koncepció részeit képzik, ezt nevezzük _állapotoknak_; habár ezen a szinten nem jellemző, de lehetőség van további állapotok készítésére, melyek által a saját dolgunkat tudjuk megkönnyíteni
 * érdemes megemlíteni az úgynevezett _invisible_ függvényt, melyet arra használunk, hogy amikor egy függvényt meghvíunk és az automatikusan visszaadná az utolsó sorában taláható értéket, mégse tegye meg - azaz kiszámítja azt az értéket amit kell, de nem írja ki meghívás esetén
+* fontos, hogy mikor egy függvény meghívása esetén hibaüzenetet kapunk végiggondoljuk a következőket: mi volt  az INPUT; hogyan kell meghívni a függvényt; mi az amit elvársz eredményként; ténylegesen az elvárást elégíti ki a program; tudom e reprodukálni a problémát ( ez a legfontosabb, enélkül nem lehetne megmutatni, hogy így generáltam a hibát )
+
+### Debug függvények
 * 
