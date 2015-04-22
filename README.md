@@ -208,6 +208,9 @@ Az úgynevezett _ciklus függvények_ ( _loop functions_ )  - mintha valami cikl
 * ugyanúgy, mint a többi programozási nyelvben, R-ben is akkor beszélünk debuggolásról, mikor egy program futása során hibát kaptunk és szeretnénk megtudni, hogy mi is ez a hiba, illetve, hogy hol található a programon belül
 * az első kérdés, hogy honnan tudjuk meg, hogy a kódunk hibát tartalmaz
 * alapjáraton három különböző szintű jelzést kapunk arról, hogy a programunk hibát tartalmaz
-* az első a _message_, mely csak egy szimpla üzenet és melytől függetlenül a programunk ugyanúgy lefut
-* a második a _warning_, mely figyelmeztet arra, hogy valami nem feltétlenül úgy történt ahogyan mi szerettük volna ( ez nem biztos, hogy egy probléma ), így ettől függetlenül a program lefut - alapértelmezetten ezt a futtatás után kapjuk meg
+* az első a _message_, mely csak egy szimpla üzenet és melytől függetlenül a programunk ugyanúgy lefut ( az üzenet a message függvény által generálódik )
+* a második a _warning_, mely figyelmeztet arra, hogy valami nem feltétlenül úgy történt ahogyan mi szerettük volna ( ez nem biztos, hogy egy probléma ), így ettől függetlenül a program lefut - alapértelmezetten ezt a futtatás után kapjuk meg ( az üzenet a warning függvény által generálódik )
+* az utolsó az _error_, mely akkora problémára hívja fel a figyelmet, amely miatt a programot nem lehet lefuttatni, így maga a program is megáll ( az üzenet stop függvény által generálódik )
+* ezek mind egy általánosabb koncepció részeit képzik, ezt nevezzük _állapotoknak_; habár ezen a szinten nem jellemző, de lehetőség van további állapotok készítésére, melyek által a saját dolgunkat tudjuk megkönnyíteni
+* érdemes megemlíteni az úgynevezett _invisible_ függvényt, melyet arra használunk, hogy amikor egy függvényt meghvíunk és az automatikusan visszaadná az utolsó sorában taláható értéket, mégse tegye meg - azaz kiszámítja azt az értéket amit kell, de nem írja ki meghívás esetén
 * 
