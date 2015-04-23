@@ -11,3 +11,10 @@ Szimulációk írása, további optimalizálási segítség és egy rövid bevez
 * a _summary_hoz képest sokkal kompaktabb kimenetet ad, ami egy nagyon hasznos tulajdonság
 
 ## Szimulációk
+* különböző eloszlásokból tudunk értékeket megadni ( véletlen számokat, az eloszlásfüggvény értékét egy adott pontban, a sürüségfüggény érétkét egy adott pontban, továbbá az eloszlás kvantilisét egy adott pontban )
+* ezek a következő prefixekkel érhetőek el: _p_ - eloszlásfüggvény adott pontban; _d_ - sűrűségfüggvény adott pontban; _q_ - kvantilis adott pontban; _r_ - véletlen számok adott pontban
+* ezen prefixek után írjuk az eloszlást meghívó szót - például ez lehet: norm, pois, gamma, binom, ... stb.
+* ezen függvényekben az értelemszerű argumentumok mellett ( adott pont, vagy mennyiség; az eloszlás paraméterei ) beállítható, hogy vegyük e az érték logaritmusát, illetve hogy az eloszlásfüggvény bal, vagy jobb farkát tekintsük ( kisebb egyenlő, vagy nagyobb kifejezést vizsgáljuk )
+* mikor géppel véltelen számokat generálunk, akkor igazából mégse véletlen számokat kapunk, hanem pszeudo véletlen számokat, így esetlegesen ha szükségünk van arra, hogy egy már korábban legenerált számsorozatot újra legeneráljunk, akkor ezt meg tudjuk tenni - ennek megvalósítására alkalmazható az úgynevezett _set.seed_ függvény
+* mivel magát a véletlenszám generálási algoritmust nem ismerem, így csak annyit tudok feljegyezni, hogy ha beállítjuk a generálás méagját egy adott egész értékre ( például _set.seed(1)_ ), majd meghívunk egy véletlenszám generálást és ezt az egész procedúrát újra végrehajtjuk, akkor ugyanazt a véletlenszám szekvenciát kapjuk - mintha a folyamatban visszaugrás után újrakezdtük a volna generálást
+* 
