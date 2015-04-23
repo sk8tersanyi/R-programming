@@ -133,4 +133,3 @@ Ha egy függvényen belül csak egy utasítás van, akkor a kapcsos zárójelek 
 * különböző osztályokból származtatott dátumok és idők között nem lehet műveleteket végezni, így minden művelet előtt érdemes típuskonverzót végrehajtani
 * azért érdemes ezeket a beépített függvényeket használni, mivel nagyon jól kezelik azokat a bajos dolgokat, mint a szökőéve, téli-nyári időszámítás és időzóna fogalma
 * érdemes megnézni, hogy dátum objektumok ábrázolását milyen jól kezeli az R
-* blabla
