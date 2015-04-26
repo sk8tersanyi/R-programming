@@ -17,4 +17,7 @@ Szimulációk írása, további optimalizálási segítség és egy rövid bevez
 * ezen függvényekben az értelemszerű argumentumok mellett ( adott pont, vagy mennyiség; az eloszlás paraméterei ) beállítható, hogy vegyük e az érték logaritmusát, illetve hogy az eloszlásfüggvény bal, vagy jobb farkát tekintsük ( kisebb egyenlő, vagy nagyobb kifejezést vizsgáljuk )
 * mikor géppel véltelen számokat generálunk, akkor igazából mégse véletlen számokat kapunk, hanem pszeudo véletlen számokat, így esetlegesen ha szükségünk van arra, hogy egy már korábban legenerált számsorozatot újra legeneráljunk, akkor ezt meg tudjuk tenni - ennek megvalósítására alkalmazható az úgynevezett _set.seed_ függvény
 * mivel magát a véletlenszám generálási algoritmust nem ismerem, így csak annyit tudok feljegyezni, hogy ha beállítjuk a generálás méagját egy adott egész értékre ( például _set.seed(1)_ ), majd meghívunk egy véletlenszám generálást és ezt az egész procedúrát újra végrehajtjuk, akkor ugyanazt a véletlenszám szekvenciát kapjuk - mintha a folyamatban visszaugrás után újrakezdtük a volna generálást
-* linear model
+* ezen szimulációs lehetőségeket tujduk használni liáris modellek esetén is
+* fontos megjegyzeni, hogy létezik egy úgynevezett _sample_ függvény is, mely segítségével adott vektor elemeiből tudunk egy véletlen mintát generálni; több argumnetuma van, melyek a feladatához mérten értelemszerűek
+* ha nem adunk meg semmi argumentumot a _sample_ függvénynek, akkor zimplán a megadott vektor elemeinek permutációját kapjuk vissza
+* a _sample_ függvény prob argumentumával könnyen tudunk saját eloszlást is generálni - megjegyezve, hogy a megadott prob vektor elemeinek összegének nem kell 1-nek lennie
