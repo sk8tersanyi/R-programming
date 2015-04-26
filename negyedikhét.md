@@ -21,3 +21,13 @@ Szimulációk írása, további optimalizálási segítség és egy rövid bevez
 * fontos megjegyzeni, hogy létezik egy úgynevezett _sample_ függvény is, mely segítségével adott vektor elemeiből tudunk egy véletlen mintát generálni; több argumnetuma van, melyek a feladatához mérten értelemszerűek
 * ha nem adunk meg semmi argumentumot a _sample_ függvénynek, akkor zimplán a megadott vektor elemeinek permutációját kapjuk vissza
 * a _sample_ függvény prob argumentumával könnyen tudunk saját eloszlást is generálni - megjegyezve, hogy a megadott prob vektor elemeinek összegének nem kell 1-nek lennie
+
+
+## Profiler, azaz sebességnövelés
+* gyakorlatban előfordulhat, hogy habár a program fut és kiszámolja amit kell, mégis a sebessége miatt nem használható - a következőkben az R-be beépített gyorsítási lehetőségeket és ötleteket nézzük át
+* a profiler általánosan egy olyan dolog, amely segítségével meg tudjuk nézni, hogy egy adott program, adott függényei/részei mennyi ideig futnak
+* előfordulhat, hogy egy függvény egyszeri futtatása tökéletesen megfelel igényeinknek, de egy adott program keretein belül ezerszer iterálva már cseppet sem optimális megoldás
+* viszont az sem egészséges, hogy egy program megalkotása közben azoptimalitás van főszerepben - aranyszabály, hogy először meglegyen a futó/működő porgram és csak uténa koncentráljunk a futásidő optimalizálására
+* fontos, hogy a gyorsításhoz szükségünk van annak ismeretére, hogy a program mely részein lassú - ehhez nem meglepően tesztadatra van szükségünk
+* az első futásidőt mérő függvényünk a _system.time_ függvény, mely argumentumában a mérendő számolást kifejező R kifejezést írjuk; ekkor 
+* 
