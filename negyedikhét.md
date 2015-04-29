@@ -41,4 +41,8 @@ Szimulációk írása, további optimalizálási segítség és egy rövid bevez
 * fontos megjegyezni, hogy a korábban taglalt _system.time_ függvénnyel ne igazán használjuk együtt, mert az csak szomorkodáshoz vezet
 * az _Rprof_ függvény meghívása után meghívott függvényekről megtudjuk, hogy milyen sorrendben hívnak meg milyen függvényeket - fontos, hogy ha a függvényünk kevesebb, mint 0,02 másodperces futásidővel rendelkezik, akkor nincs értelme a profiler használatának, mivel az 0,02 másodpercenként írja ki az adatokat
 * az _Rprof_ függvény nyers outputja nem igazuán használható - mint ahogyan azt már korábban megjegyeztük - ezért inkább a _summaryRprof_ függvényt használjuk, mely egy táblázatba rendezve adja meg, hogy a függvényhívás után megjelenő egyes szubrutinok futásidejét
-* 
+* ezen táblázaat visszaadásához két módszerünk van: a _by.total_ és a _by.step_
+* a _by.total_ esetén az a futásidő mérésének koncepciója, hogy a nyers outputban megjelenő adatokban az adott szubrutin hányszor szerepel az összes előforduláshoz képest - azaz pl ha az lm függvényt hívjuk meg akkor az ő _by.total_ futásideje 100%os lesz, ugyanis végig az ő környezetében leszünk
+* ezzel szemben gyakran az aktuálisan meghívott függvény nem is igazán csinál semmit, csak újabb ( helper ) függvényeket hív meg, amelyek a lényegi munkát ténylegesen végzik; ezen alsóbb szinten lévő szubrutinok futási idejének mérésének visszaadására használható a _by.self_ módszer, mely a felső szinten lévő függvények által történt függvényhívások után nézi a futásiidőket
+* maga a _summaryRprof_ függvény futtatása nem teljesen átlátható számomr, de az R-beli példán minden jól szemléltetve van
+* látható, hogy egy 4 elemű lista az output:  _by.self_, _by.total_, _sapmle.interval_, _sampling.time_ - ezek mind értelemszerű adatokat reprezentálnak a korábbiaknak megfelelően
