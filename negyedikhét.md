@@ -46,3 +46,6 @@ Szimulációk írása, további optimalizálási segítség és egy rövid bevez
 * ezzel szemben gyakran az aktuálisan meghívott függvény nem is igazán csinál semmit, csak újabb ( helper ) függvényeket hív meg, amelyek a lényegi munkát ténylegesen végzik; ezen alsóbb szinten lévő szubrutinok futási idejének mérésének visszaadására használható a _by.self_ módszer, mely a felső szinten lévő függvények által történt függvényhívások után nézi a futásiidőket
 * maga a _summaryRprof_ függvény futtatása nem teljesen átlátható számomr, de az R-beli példán minden jól szemléltetve van
 * látható, hogy egy 4 elemű lista az output:  _by.self_, _by.total_, _sapmle.interval_, _sampling.time_ - ezek mind értelemszerű adatokat reprezentálnak a korábbiaknak megfelelően
+* a _summaryRprof_ esetén esetleg ilyen átmeneti fájlokat kell használni??
+* a profiler további haszna - a futásidő optimalizálása mellet - hogy segítségével tudjuk a programunkat ésszerűen függvényekre taglalni
+* ha a programunk C vagy Fortran kódot is használ, akkor a ezen részek futásidejét nem tudjuk az R-beli profiler-rel elérni
