@@ -27,7 +27,7 @@ Szimulációk írása, további optimalizálási segítség és egy rövid bevez
 * gyakorlatban előfordulhat, hogy habár a program fut és kiszámolja amit kell, mégis a sebessége miatt nem használható - a következőkben az R-be beépített gyorsítási lehetőségeket és ötleteket nézzük át
 * a profiler általánosan egy olyan dolog, amely segítségével meg tudjuk nézni, hogy egy adott program, adott függényei/részei mennyi ideig futnak
 * előfordulhat, hogy egy függvény egyszeri futtatása tökéletesen megfelel igényeinknek, de egy adott program keretein belül ezerszer iterálva már cseppet sem optimális megoldás
-* viszont az sem egészséges, hogy egy program megalkotása közben azoptimalitás van főszerepben - aranyszabály, hogy először meglegyen a futó/működő porgram és csak uténa koncentráljunk a futásidő optimalizálására
+* viszont az sem egészséges, hogy egy program megalkotása közben az optimalitás van főszerepben - aranyszabály, hogy először meglegyen a futó/működő porgram és csak utána koncentráljunk a futásidő optimalizálására
 * fontos, hogy a gyorsításhoz szükségünk van annak ismeretére, hogy a program mely részein lassú - ehhez nem meglepően tesztadatra van szükségünk
 * az első futásidőt mérő függvényünk a _system.time_ függvény, mely argumentumában a mérendő számolást kifejező R kifejezést írjuk
 * ha a megadott kifejezésben hiba szerepel, akkor az időt csak a hibáig méri, továbbá ez a visszaadott érték másodpercben értendő
@@ -35,4 +35,10 @@ Szimulációk írása, további optimalizálási segítség és egy rövid bevez
 * ez a kettő érték viszonylag közeli, de persze bármilyen "felállás" előfordulhat; például az _elapsed time_ várhatóan nagyobb lesz, mint a _user time_, ha a processzor a megadott függvény kiérétkeléséhez további dolgokra vár ( ilyen mikor egy honlapról olvasuk ki dolgokat ); viszont a fordított eset is bekövetkezhet ha a programban van párhuzamosítás ( a többmagos processzort kihasználja - szinguláris értékek számolása mehet párhuzamosan, szóval az ilyen lesz )
 * megjegyezendő, hogy alapjáraton az R nyelv nem használ több magot egyszerre, de van lehetőség ilyen könyvtárak ( _BLAS_ ) használatára az R-en belül, illetve létezik egy úgynevezett _parallel_ package, mely segítségével szintén a többmagosságot lehet kihasználni
 * a _system.time_ függvényben érhetünk hosszabb kifejezéseket is, egyszerűen bepakoljuk egy kapcsos zárójelbe az egészet
-* a gond evvel a fügvénnyel az, hogy csak eglsz programok futásidejét tudjuk megnézni - azt, hogy konkrétan mely részein lassú a programunk azt már nem
+* a gond evvel a fügvénnyel az, hogy csak egész programok futásidejét tudjuk megnézni - azt, hogy konkrétan mely részein lassú a programunk azt már nem
+* erre való az R-be beépített _Rprof_ profiler függvény, melyet csak akkor tudunk használni ha az általunk használt R verzió ennek támogatásával volt fordítva ( ez az újabb verzióknál már alapból így van )
+* ezen függvényt meghívva elindul a profiler, de ennek a sztenderd outputja nem feltétlenül használható, így érdemes inkább a _summaryRprof_ függvényt használni, ami az előbbi outputját foglalja össze egy olvashatóbb formában
+* fontos megjegyezni, hogy a korábban taglalt _system.time_ függvénnyel ne igazán használjuk együtt, mert az csak szomorkodáshoz vezet
+* az _Rprof_ függvény meghívása után meghívott függvényekről megtudjuk, hogy milyen sorrendben hívnak meg milyen függvényeket - fontos, hogy ha a függvényünk kevesebb, mint 0,02 másodperces futásidővel rendelkezik, akkor nincs értelme a profiler használatának, mivel az 0,02 másodpercenként írja ki az adatokat
+* az _Rprof_ függvény nyers outputja nem igazuán használható - mint ahogyan azt már korábban megjegyeztük - ezért inkább a _summaryRprof_ függvényt használjuk, mely egy táblázatba rendezve adja meg, hogy a függvényhívás után megjelenő egyes szubrutinok futásidejét
+* 
